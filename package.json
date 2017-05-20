@@ -1,0 +1,29 @@
+{
+  "name": "zstyle",
+  "version": "0.0.1",
+  "description": "Simple css styles.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zycio/z-style.git"
+  },
+  "keywords": [
+    "zycio",
+    "z-style"
+  ],
+  "author": "zycio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zycio/z-style/issues"
+  },
+  "homepage": "https://github.com/zycio/z-style#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-injector": "^1.1.0",
+    "jit-grunt": "^0.10.0"
+  }
+}

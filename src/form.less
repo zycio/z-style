@@ -1,0 +1,83 @@
+@formBorderColor: #ccc;
+@inputBgColor: #FFF;
+@inputFocusColor: #09c;
+@inputDisabledColor: #eee;
+
+@formPadding: 5px;
+
+@inputSuccessColor: #2ecc71;
+@inputWarningColor: #ffbd43;
+@inputErrorColor: #d45242;
+
+form {
+    border: 1px solid @formBorderColor;
+    padding: @formPadding;
+
+    input {
+        border: 1px solid @formBorderColor;
+        background-color: @inputBgColor;
+        padding: @formPadding;
+        width: 100%;
+        outline: 0;
+        box-shadow: none;
+        -webkit-transition: border 0.5s;
+        transition: border 0.5s;
+
+        &:not(:last-child) {
+            margin-bottom: @formPadding;
+        }
+
+        &:focus {
+            border: 1px solid @inputFocusColor;
+            box-shadow: 0 0 5px @formBorderColor;
+        }
+
+        &:disabled {
+            background-color: @inputDisabledColor;
+            color: @inputDisabledColor;
+            cursor: not-allowed;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        resize: vertical;
+        border: 1px solid @formBorderColor;
+        padding: @formPadding;
+        -webkit-transition: border 0.5s;
+        transition: border 0.5s;
+
+        &:focus {
+            border: 1px solid @inputFocusColor;
+            box-shadow: 0 0 5px @formBorderColor;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: @formPadding;
+        }
+    }
+
+    .has-success {
+        border-color: @inputSuccessColor;
+
+        &:focus {
+            border: 1px solid @inputSuccessColor;
+        }
+    }
+
+    .has-warning {
+        border-color: @inputWarningColor;
+
+        &:focus {
+            border-color: @inputWarningColor;
+        }
+    }
+
+    .has-error {
+        border-color: @inputErrorColor;
+
+        &:focus {
+            border-color: @inputErrorColor;
+        }
+    }
+}

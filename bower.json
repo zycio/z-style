@@ -1,0 +1,18 @@
+{
+  "name": "z-style",
+  "version": "0.0.1",
+  "description": "Simple css styles.",
+  "main": "",
+  "authors": [
+    "zycio <df@zycio.pl>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "zycio",
+    "z-style"
+  ],
+  "homepage": "https://github.com/zycio/z-style",
+  "main": [
+      "./dest/z-style.css"
+  ]
+}

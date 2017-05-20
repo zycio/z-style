@@ -1,0 +1,94 @@
+@defaultBgColor: #FFF;
+@defaultColor: #616161;
+@defaultBorderColor: rgba(0, 0, 0, 0.13);
+
+@primaryBgColor: #09c;
+@primaryColor: @defaultBgColor;
+@primaryBorderColor: @defaultBorderColor;
+
+@successBgColor: #2ecc71;
+@successColor: @defaultBgColor;
+@successBorderColor: @defaultBorderColor;
+
+@infoBgColor: #4cc3d9;
+@infoColor: @defaultBgColor;
+@infoBorderColor: @defaultBorderColor;
+
+@warningBgColor: #ffbd43;
+@warningColor: @defaultBgColor;
+@warningBorderColor: @defaultBorderColor;
+
+@dangerBgColor: #d45242;
+@dangerColor: @defaultBgColor;
+@dangerBorderColor: @defaultBorderColor;
+
+@disabledColor: #ccc;
+
+.button(@name, @color, @bgColor, @borderColor) {
+    &-@{name} {
+        color: @color;
+        background-color: @bgColor;
+        border-color: @borderColor;
+
+        &.btn-outline when not (@name = default) {
+            color: @bgColor;
+            background-color: transparent;
+            border-color: @bgColor;
+        }
+
+        &.btn-outline when (@name = default) {
+            color: @defaultColor;
+            background-color: transparent;
+            border-color: @defaultColor;
+        }
+    }
+}
+
+.btn {
+    min-width: 80px;
+    padding: 2px 3px;
+    font-size: 13px;
+    outline: 0;
+    line-height: 20px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    .button(default, @defaultColor, @defaultBgColor, @defaultBorderColor);
+    .button(primary, @primaryColor, @primaryBgColor, @primaryBorderColor);
+    .button(success, @successColor, @successBgColor, @successBorderColor);
+    .button(info, @infoColor, @infoBgColor, @infoBorderColor);
+    .button(warning, @warningColor, @warningBgColor, @warningBorderColor);
+    .button(danger, @dangerColor, @dangerBgColor, @dangerBorderColor);
+
+    &:disabled {
+        color: @disabledColor;
+        background-color: @defaultBgColor;
+        border-color: @defaultBorderColor;
+    }
+
+    &:hover:not(:disabled) {
+        opacity: 0.8;
+    }
+
+    &-sm {
+        font-size: 12px;
+    }
+
+    &-md {
+        font-size: 14px;
+        padding: 5px 7px;
+    }
+
+    &-lg {
+        font-size: 16px;
+        padding: 7px 9px;
+    }
+}

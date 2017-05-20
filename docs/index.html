@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="zycio">
+        <title>z-style - demo</title>
+
+        <link href="z-style.min.css" rel="stylesheet">
+    </head>
+    <body class="preload">
+        <article>
+            <h2>Buttons</h2>
+            <section>
+                <button class="btn btn-default">default</button>
+                <button class="btn btn-primary">primary</button>
+                <button class="btn btn-success">success</button>
+                <button class="btn btn-info">info</button>
+                <button class="btn btn-warning">warning</button>
+                <button class="btn btn-danger">danger</button>
+                <button class="btn" disabled>disabled</button>
+            </section>
+            <section>
+                <button class="btn btn-default btn-outline">default</button>
+                <button class="btn btn-primary btn-outline">primary</button>
+                <button class="btn btn-success btn-outline">success</button>
+                <button class="btn btn-info btn-outline">info</button>
+                <button class="btn btn-warning btn-outline">warning</button>
+                <button class="btn btn-danger btn-outline">danger</button>
+                <button class="btn btn-outline" disabled>disabled</button>
+            </section>
+            <button class="btn btn-default btn-sm">small</button>
+            <button class="btn btn-default btn-md">medium</button>
+            <button class="btn btn-default btn-lg">large</button>
+        </article>
+        <article>
+            <h2>Grid</h2>
+            <section>
+                <div class="grid">
+                    <div class="grid-row">
+                        <div class="grid-cell">cell</div>
+                        <div class="grid-cell">cell</div>
+                        <div class="grid-cell">cell</div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell">cell2</div>
+                        <div class="grid-cell">cell2</div>
+                        <div class="grid-cell">cell2</div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article>
+            <h2>Form</h2>
+            <section>
+                <form action="">
+                    <input type="text" placeholder="Default">
+                    <input type="text" placeholder="Disabled" disabled>
+                    <textarea rows="8" cols="80">Textarea</textarea>
+
+                    <input class="has-success" type="text" placeholder="Success">
+                    <input class="has-warning" type="text" placeholder="Warning">
+                    <input class="has-error" type="text" placeholder="Error">
+                </form>
+            </section>
+        </article>
+
+
+
+        <script type="text/javascript">
+            window.onload = function() {
+                document.body.className = '';
+            };
+        </script>
+    </body>
+</html>
